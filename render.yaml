@@ -1,0 +1,21 @@
+YAML
+services:
+  - type: web
+    name: n8n-app
+    env: docker
+    repo: https://github.com/n8n-io/n8n
+    plan: free
+    region: singapore
+    envVars:
+      - key: N8N_PORT
+        value: 5678
+      - key: N8N_PROTOCOL
+        value: https
+      - key: NODE_ENV
+        value: production
+      - key: WEBHOOK_URL
+        value: https://n8n-app.onrender.com/
+    disk:
+      name: n8n-data
+      mountPath: /home/node/.n8n
+      sizeGB: 1
