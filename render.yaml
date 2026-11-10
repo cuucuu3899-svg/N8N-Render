@@ -1,5 +1,5 @@
 YAML
-services:
+services: "1"
   - type: web
     name: n8n-app
     env: docker
