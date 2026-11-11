@@ -15,7 +15,4 @@ services:
         value: production
       - key: WEBHOOK_URL
         value: https://n8n-app.onrender.com/
-    disk:
-      name: n8n-data
-      mountPath: /home/node/.n8n
-      sizeGB: 1
+  
